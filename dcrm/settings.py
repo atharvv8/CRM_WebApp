@@ -31,13 +31,12 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DEBUG')
 
 ALLOWED_HOSTS = []
-RENDER_EXTERNAL_HOSTNAME = os.environ.get('ALLOWED_HOSTS').split(" ")
+# RENDER_EXTERNAL_HOSTNAME = os.environ.get('ALLOWED_HOSTS').split(" ")
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'homepage.apps.HomepageConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
