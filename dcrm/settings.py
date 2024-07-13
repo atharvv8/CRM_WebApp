@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'RENDER' not in os.environ
+DEBUG = os.environ.get('DEBUG')
 
 ALLOWED_HOSTS = []
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('ALLOWED_HOSTS').split(" ")
@@ -89,8 +89,9 @@ DATABASES = {
         conn_max_age=600
     )
 }
-DATABASES["default"] = dj_database_url.parse("postgresql://prettyinstance_user:vzItJ0Nob5WTFL5DyiPzA6KdBBDvJDKO@dpg-cq8p1h3v2p9s73aqbvqg-a/prettyinstance")
 database_url = os.environ.get("DATABASE_URL")
+DATABASES["default"] = dj_database_url.parse(database_url)
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
