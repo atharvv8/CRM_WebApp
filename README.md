@@ -4,7 +4,7 @@ This is a simple Customer Record Management web application built with Django. I
 
 ## Live Demo
 
-Check out the live demo [here]([https://your-live-app-link.com](https://crm-webapp-ztez.onrender.com/)).
+Check out the live demo [here](https://crm-webapp-ztez.onrender.com/).
 
 ## Features
 
